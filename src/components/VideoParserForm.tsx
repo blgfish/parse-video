@@ -10,7 +10,7 @@ import {
   detectPlatform,
   hasValidVideoUrl,
 } from "@/utils/share";
-import { showWxAuth } from "@/components/WxAuthInit";
+// import { showWxAuth } from "@/components/WxAuthInit";
 
 interface VideoParserFormProps {
   onResult: (data: ApiResponse | null, errorMsg: string) => void;
@@ -118,7 +118,7 @@ export default function VideoParserForm({
       if (!url) return;
 
       // 微信关注弹窗：每次发起解析都弹出（可关闭，不阻塞解析流程）
-      showWxAuth().catch(() => {});
+      // showWxAuth().catch(() => {});
 
       const cacheKey = `${platform}:${url}`;
 
